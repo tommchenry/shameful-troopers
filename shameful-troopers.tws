@@ -1,7 +1,7 @@
 (dp0
 S'buildDestination'
 p1
-S''
+VC:\u005cTom McHenry's Dropbox\u005cDropbox\u005cGames - Twine\u005cshameful-troopers\u005cshameful-troopers.html
 p2
 sS'saveDestination'
 p3
@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-VSHAMEFUL IMPOSTOR TROOPERS\u000a\u000a[[Start Game]]
+VSHAMEFUL IMPOSTOR TROOPERS\u000a\u000a[[Start Game]]\u000a<<set $inventoryPos = 0>>
 p22
 sS'title'
 p23
@@ -50,12 +50,12 @@ struct_time
 p26
 ((I2014
 I11
-I10
-I14
-I57
-I24
-I0
-I314
+I12
+I16
+I22
+I8
+I2
+I316
 I0
 tp27
 (dp28
@@ -193,7 +193,7 @@ Tiddler
 p70
 (dp71
 g21
-VYou are dressed as Shame Troopers, the most reviled of all the Empire's troopers. You are lost in the Further Wastes and the Hideos Legions will find you soon, if not before nightfall.\u000a\u000a[[You need to get ready.|Main Map]]\u000a\u000a<<display Materials>>
+VYou are dressed as Shame Troopers, the most reviled of all the Empire's troopers. You are lost in the Further Wastes and the Hideous Legions will find you soon, if not before nightfall.\u000a\u000a[[You need to get ready.|Main Map]]\u000a<<set $inventoryPos = 0>>\u000a<<print $inventoryPos>>\u000a<<display Materials>>
 p72
 sg23
 VStart Game
@@ -203,9 +203,9 @@ g26
 ((I2014
 I11
 I10
-I14
-I57
-I8
+I15
+I54
+I40
 I0
 I314
 I0
@@ -235,15 +235,15 @@ g14
 I00
 sg15
 (lp84
-F411.0
-aF182.0
+F408.0
+aF205.0
 asg17
 (itiddlywiki
 Tiddler
 p85
 (dp86
 g21
-V<table>\u000a<tbody>\u000a<tr>\u000a<td><<print $Slot1.name>></td>\u000a<td>Test 2</td>\u000a<td>Test 3</td>\u000a</tr>\u000a<tr>\u000a<td>Test 1</td>\u000a<td>Test 2</td>\u000a<td>Test 3</td>\u000a</tr>\u000a<tr>\u000a<td>Test 1</td>\u000a<td>Test 2</td>\u000a<td>Test 3</td>\u000a</tr>\u000a</tbody>\u000a</table>
+VPlacing <<print $inventory[$inventoryPos].name>>\u000a\u000a<table>\u000a<tbody>\u000a<tr>\u000a<td><<print $Slot1.name>></td>\u000a<td><<print $Slot2.name>></td>\u000a<td><<print $Slot3.name>></td>\u000a</tr>\u000a<tr>\u000a<td><<print $Slot4.name>></td>\u000a<td><<print $Slot5.name>></td>\u000a<td><<print $Slot6.name>></td>\u000a</tr>\u000a<tr>\u000a<td><<print $Slot7.name>></td>\u000a<td><<print $Slot8.name>></td>\u000a<td><<print $Slot9.name>></td>\u000a</tr>\u000a</tbody>\u000a</table>
 p87
 sg23
 VMain Map
@@ -252,12 +252,12 @@ sg25
 g26
 ((I2014
 I11
-I10
-I15
+I12
+I16
+I21
+I36
 I2
-I47
-I0
-I314
+I316
 I0
 tp89
 (dp90
@@ -285,15 +285,15 @@ g14
 I00
 sg15
 (lp99
-I165
-aI153
+I218
+aI146
 asg17
 (itiddlywiki
 Tiddler
 p100
 (dp101
 g21
-V<<set //initialize \u000a\u000a$Turret1 = {\u000a	name: "Scutter Turret",\u000a	damage: Math.floor(Math.random() * 6) + 1,\u000a	hitrate: Math.floor(Math.random() * 3) + 1,\u000a	positionhoriz: 0,\u000a	positionvert: 0\u000a};	\u000a\u000a$Slot1 = {\u000a	name: "[[Nothing]]",\u000a	damage: Math.floor(Math.random() * 6) + 1,\u000a	hitrate: Math.floor(Math.random() * 3) + 1,\u000a	positionhoriz: 0,\u000a	positionvert: 0\u000a};\u000a>>
+V<<set //initialize \u000a\u000a$Turret1 = {\u000a	name: "Scutter Turret",\u000a	damage: Math.floor(Math.random() * 6) + 1,\u000a	hitrate: Math.floor(Math.random() * 3) + 1\u000a};\u000a\u000a$CoolFlag = {\u000a	name: "Cool Flag"\u000a}\u000a\u000a$SlotTest = {\u000a	name: "[[Nothing|Place Test]]",\u000a	damage: Math.floor(Math.random() * 6) + 1,\u000a	hitrate: Math.floor(Math.random() * 3) + 1\u000a}\u000a\u000a$Slot1 = {\u000a	name: "[[Nothing|Place 1]]",\u000a	damage: Math.floor(Math.random() * 6) + 1,\u000a	hitrate: Math.floor(Math.random() * 3) + 1\u000a};\u000a\u000a$Slot2 = {\u000a	name: "[[Nothing|Place 2]]",\u000a	damage: Math.floor(Math.random() * 6) + 1,\u000a	hitrate: Math.floor(Math.random() * 3) + 1\u000a};\u000a\u000a$Slot3 = {\u000a	name: "[[Nothing|Place 3]]",\u000a	damage: Math.floor(Math.random() * 6) + 1,\u000a	hitrate: Math.floor(Math.random() * 3) + 1\u000a};\u000a\u000a$Slot4 = {\u000a	name: "[[Nothing|Place 4]]",\u000a	damage: Math.floor(Math.random() * 6) + 1,\u000a	hitrate: Math.floor(Math.random() * 3) + 1\u000a};\u000a\u000a$Slot5 = {\u000a	name: "[[Nothing|Place 5]]",\u000a	damage: Math.floor(Math.random() * 6) + 1,\u000a	hitrate: Math.floor(Math.random() * 3) + 1\u000a};\u000a\u000a$Slot6 = {\u000a	name: "[[Nothing|Place 6]]",\u000a	damage: Math.floor(Math.random() * 6) + 1,\u000a	hitrate: Math.floor(Math.random() * 3) + 1\u000a};\u000a\u000a$Slot7 = {\u000a	name: "[[Nothing|Place 7]]",\u000a	damage: Math.floor(Math.random() * 6) + 1,\u000a	hitrate: Math.floor(Math.random() * 3) + 1\u000a};\u000a\u000a$Slot8 = {\u000a	name: "[[Nothing|Place 8]]",\u000a	damage: Math.floor(Math.random() * 6) + 1,\u000a	hitrate: Math.floor(Math.random() * 3) + 1\u000a};\u000a\u000a$Slot9 = {\u000a	name: "[[Nothing|Place 9]]",\u000a	damage: Math.floor(Math.random() * 6) + 1,\u000a	hitrate: Math.floor(Math.random() * 3) + 1\u000a};\u000a\u000a$inventory = [$Turret1, $CoolFlag] 	\u000a>>\u000a
 p102
 sg23
 VMaterials
@@ -302,12 +302,12 @@ sg25
 g26
 ((I2014
 I11
-I10
-I15
-I3
-I51
-I0
-I314
+I12
+I16
+I21
+I8
+I2
+I316
 I0
 tp104
 (dp105
@@ -335,15 +335,15 @@ g14
 I00
 sg15
 (lp114
-I329
-aI338
+I489
+aI477
 asg17
 (itiddlywiki
 Tiddler
 p115
 (dp116
 g21
-V[[Does this work?|Main Map]]\u000a<<set $Slot1 = $Turret1>>
+V[[Does this work?|Main Map]]\u000a<<set $Slot1 = $Turret1>>\u000a<<set $inventoryPos+=1>>
 p117
 sg23
 VNothing
@@ -354,7 +354,7 @@ g26
 I11
 I10
 I15
-I8
+I46
 I27
 I0
 I314
@@ -380,10 +380,460 @@ tp124
 (dp125
 tp126
 Rp127
+sbsa(dp128
+g14
+I00
+sg15
+(lp129
+F837.0
+aF120.0
+asg17
+(itiddlywiki
+Tiddler
+p130
+(dp131
+g21
+V[[Does this work?|Main Map]]\u000a<<set $Slot8 = $inventory[$inventoryPos]>>\u000a<<set $inventoryPos+=1>>
+p132
+sg23
+VPlace 8
+p133
+sg25
+g26
+((I2014
+I11
+I10
+I15
+I49
+I14
+I0
+I314
+I0
+tp134
+(dp135
+tp136
+Rp137
+sg31
+(lp138
+sg33
+g26
+((I2014
+I11
+I10
+I15
+I40
+I19
+I0
+I314
+I0
+tp139
+(dp140
+tp141
+Rp142
+sbsa(dp143
+g14
+I00
+sg15
+(lp144
+F193.0
+aF293.0
+asg17
+(itiddlywiki
+Tiddler
+p145
+(dp146
+g21
+V[[Does this work?|Main Map]]\u000a<<set $Slot9 = $inventory[$inventoryPos]>>\u000a<<set $inventoryPos+=1>>
+p147
+sg23
+VPlace 9
+p148
+sg25
+g26
+((I2014
+I11
+I10
+I15
+I49
+I23
+I0
+I314
+I0
+tp149
+(dp150
+tp151
+Rp152
+sg31
+(lp153
+sg33
+g26
+((I2014
+I11
+I10
+I15
+I40
+I19
+I0
+I314
+I0
+tp154
+(dp155
+tp156
+Rp157
+sbsa(dp158
+g14
+I00
+sg15
+(lp159
+F417.0
+aF13.0
+asg17
+(itiddlywiki
+Tiddler
+p160
+(dp161
+g21
+V[[Does this work?|Main Map]]\u000a<<set $Slot6 = $inventory[$inventoryPos]>>\u000a<<set $inventoryPos+=1>>
+p162
+sg23
+VPlace 6
+p163
+sg25
+g26
+((I2014
+I11
+I10
+I15
+I48
+I58
+I0
+I314
+I0
+tp164
+(dp165
+tp166
+Rp167
+sg31
+(lp168
+sg33
+g26
+((I2014
+I11
+I10
+I15
+I40
+I19
+I0
+I314
+I0
+tp169
+(dp170
+tp171
+Rp172
+sbsa(dp173
+g14
+I00
+sg15
+(lp174
+F285.0
+aF458.0
+asg17
+(itiddlywiki
+Tiddler
+p175
+(dp176
+g21
+V[[Does this work?|Main Map]]\u000a<<set $Slot7 = $inventory[$inventoryPos]>>\u000a<<set $inventoryPos+=1>>
+p177
+sg23
+VPlace 7
+p178
+sg25
+g26
+((I2014
+I11
+I10
+I15
+I49
+I4
+I0
+I314
+I0
+tp179
+(dp180
+tp181
+Rp182
+sg31
+(lp183
+sg33
+g26
+((I2014
+I11
+I10
+I15
+I40
+I19
+I0
+I314
+I0
+tp184
+(dp185
+tp186
+Rp187
+sbsa(dp188
+g14
+I01
+sg15
+(lp189
+F145.0
+aF451.0
+asg17
+(itiddlywiki
+Tiddler
+p190
+(dp191
+g21
+V[[Does this work?|Main Map]]\u000a<<set $Slot4 = $inventory[$inventoryPos]>>\u000a<<set $inventoryPos+=1>>
+p192
+sg23
+VPlace 4
+p193
+sg25
+g26
+((I2014
+I11
+I10
+I15
+I49
+I31
+I0
+I314
+I0
+tp194
+(dp195
+tp196
+Rp197
+sg31
+(lp198
+sg33
+g26
+((I2014
+I11
+I10
+I15
+I40
+I19
+I0
+I314
+I0
+tp199
+(dp200
+tp201
+Rp202
+sbsa(dp203
+g14
+I00
+sg15
+(lp204
+F557.0
+aF13.0
+asg17
+(itiddlywiki
+Tiddler
+p205
+(dp206
+g21
+V[[Does this work?|Main Map]]\u000a<<set $Slot5 = $inventory[$inventoryPos]>>\u000a<<set $inventoryPos+=1>>
+p207
+sg23
+VPlace 5
+p208
+sg25
+g26
+((I2014
+I11
+I10
+I15
+I48
+I32
+I0
+I314
+I0
+tp209
+(dp210
+tp211
+Rp212
+sg31
+(lp213
+sg33
+g26
+((I2014
+I11
+I10
+I15
+I40
+I19
+I0
+I314
+I0
+tp214
+(dp215
+tp216
+Rp217
+sbsa(dp218
+g14
+I00
+sg15
+(lp219
+F675.0
+aF149.0
+asg17
+(itiddlywiki
+Tiddler
+p220
+(dp221
+g21
+V[[Does this work?|Main Map]]\u000a<<set $Slot2 = $inventory[$inventoryPos]>>\u000a<<set $inventoryPos+=1>>
+p222
+sg23
+VPlace 2
+p223
+sg25
+g26
+((I2014
+I11
+I10
+I15
+I46
+I41
+I0
+I314
+I0
+tp224
+(dp225
+tp226
+Rp227
+sg31
+(lp228
+sg33
+g26
+((I2014
+I11
+I10
+I15
+I40
+I19
+I0
+I314
+I0
+tp229
+(dp230
+tp231
+Rp232
+sbsa(dp233
+g14
+I00
+sg15
+(lp234
+F695.0
+aF296.0
+asg17
+(itiddlywiki
+Tiddler
+p235
+(dp236
+g21
+V[[Does this work?|Main Map]]\u000a<<set $Slot3 = $inventory[$inventoryPos]>>\u000a<<set $inventoryPos+=1>>
+p237
+sg23
+VPlace 3
+p238
+sg25
+g26
+((I2014
+I11
+I10
+I15
+I48
+I46
+I0
+I314
+I0
+tp239
+(dp240
+tp241
+Rp242
+sg31
+(lp243
+sg33
+g26
+((I2014
+I11
+I10
+I15
+I40
+I19
+I0
+I314
+I0
+tp244
+(dp245
+tp246
+Rp247
+sbsa(dp248
+g14
+I00
+sg15
+(lp249
+F629.0
+aF469.0
+asg17
+(itiddlywiki
+Tiddler
+p250
+(dp251
+g21
+V[[Does this work?|Main Map]]\u000a<<print $Slot1.name>>\u000a<<set $Slot1 = $inventory[$inventoryPos]>>\u000a<<print $Slot1.name>>
+p252
+sg23
+VPlace 1
+p253
+sg25
+g26
+((I2014
+I11
+I10
+I16
+I13
+I38
+I0
+I314
+I0
+tp254
+(dp255
+tp256
+Rp257
+sg31
+(lp258
+sg33
+g26
+((I2014
+I11
+I10
+I15
+I40
+I19
+I0
+I314
+I0
+tp259
+(dp260
+tp261
+Rp262
 sbsasS'scale'
-p128
+p263
 I1
 sS'snapping'
-p129
+p264
 I00
 ss.
